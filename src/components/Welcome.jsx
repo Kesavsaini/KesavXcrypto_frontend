@@ -4,7 +4,7 @@ import {SiEthereum} from 'react-icons/si';
 import { TransictionContext } from '../Context/TransactionContext';
 const Input=({ph,name,type,handleChange})=>{
   return(
-  <input type={`${type}`} className='blue-glassmorphism p-2 rounded-md text-white drop-shadow outline-none border-none' placeholder={`     ${ph}`} name={`${name}`} onChange={(e)=>handleChange(e,name)}/>
+  <input type={`${type}`} className='blue-glassmorphism p-2 rounded-md text-white placeholder:text-white drop-shadow outline-none border-none' placeholder={`     ${ph}`} name={`${name}`} onChange={(e)=>handleChange(e,name)}/>
   )
 }
 const Welcome = () => {
@@ -23,7 +23,7 @@ const Welcome = () => {
       <div className='flex flex-col justify-center item-center m-7'>
       <div className='text-white text-4xl my-2 w-72'>Send Crypto across the world</div>
       <div className='text-white text-xs my-2 w-72'>Explore the crypto world buy and sell cryptocurrency easily on krypto.</div>
-      {!currentAccount && <button className='bg-[blue] text-white my-2 w-full py-2 rounded-full' onClick={connectWallet}>Connect the wallet</button>}
+      {!currentAccount && <button className='bg-[black] text-white my-2 w-full py-2 rounded-full' onClick={connectWallet}>Connect the wallet</button>}
       <div className='grid grid-cols-3 my-10'>
         <div className='text-white border-solid border-white  border px-7 py-6 rounded-tl-xl flex items-center justify-center'>Reliablity</div>
         <div className='text-white border-solid border-white border px-7 py-6 flex items-center justify-center'>Security</div>

@@ -12,8 +12,11 @@ const Navbar = () => {
   const [toggleMenu,setToggle]=useState(false);
   return (
    <nav className='w-full flex md:justify-center justify-between items-center p-4'>
-    <div className="md:flex-[0.5] justify-center items-center">
-    <img src={logo} alt="" className="w-32 cursor-pointer"/>
+    <div className="md:flex-[0.5]  justify-center items-center">
+    <div className='flex items-center'>
+    <img src={logo} alt="" className="w-16 cursor-pointer"/>
+    <div className='text-white text-3xl font-bold'>Xkrypt</div>
+    </div>
     </div>
     <ul className="text-white md:flex hidden md:flex-row flex-col justify-between items-center">
        {
@@ -21,7 +24,7 @@ const Navbar = () => {
            <Navitem title={item}></Navitem>
         ))
        }
-       <li className={`mx-4 cursor-pointer bg-[#2952e3] py-2 px-7 rounded-full hover:bg-[#2546bd]`}>Login</li>
+       <li className={`mx-4 cursor-pointer bg-[black] py-2 px-7 rounded-full hover:bg-[#353636]`}>Login</li>
     </ul>
     <div className="flex relative">
     {
