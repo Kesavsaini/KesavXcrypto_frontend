@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react';
 import {SiEthereum} from 'react-icons/si';
 import { TransictionContext } from '../Context/TransactionContext';
+import ShortAdress from '../utils/ShortAdress';
 const Input=({ph,name,type,handleChange})=>{
   return(
   <input type={`${type}`} className='blue-glassmorphism p-2 rounded-md text-white placeholder:text-white drop-shadow outline-none border-none' placeholder={`     ${ph}`} name={`${name}`} onChange={(e)=>handleChange(e,name)}/>
@@ -44,7 +45,7 @@ const Welcome = () => {
         </div>
         </div>
         <div className='absolute bottom-1 left-1'>
-        <div className='text-white text-xs'>Adress</div>
+        <div className='text-white text-xs'><ShortAdress address={currentAccount}/></div>
         <div className='text-white text-bold'>Etherium</div>
         </div>
         </div>
